@@ -2,8 +2,8 @@ package spaceshapes.forms;
 
 import java.awt.Color;
 
-import spaceshapes.DynamicRectangleShape;
 import spaceshapes.CarrierShape;
+import spaceshapes.DynamicShape;
 import spaceshapes.ShapeModel;
 import spaceshapes.forms.util.Form;
 import spaceshapes.forms.util.FormHandler;
@@ -30,7 +30,7 @@ public class DynamicRectangleShapeFormHandler implements FormHandler {
 		Color colour = (Color) form
 				.getFieldValue(Color.class, ColourFormElement.COLOUR);
 
-		DynamicRectangleShape newShape = new DynamicRectangleShape(x, y,
+		DynamicShape newShape = new DynamicShape(x, y,
 				deltaX, deltaY, width, height, text, colour);
 		_model.add(newShape, _parentOfNewShape);
 	}

@@ -7,8 +7,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import spaceshapes.ImageRectangleShape;
 import spaceshapes.CarrierShape;
+import spaceshapes.ImageRectangleShape;
 import spaceshapes.ShapeModel;
 import spaceshapes.forms.util.Form;
 import spaceshapes.forms.util.FormHandler;

@@ -33,14 +33,14 @@ public class TestCarrierShape {
 	 *           |
 	 *           --- CarrierShape (bottomLevelNest)
 	 *           |
-	 *           --- RectangleShape (simpleShape)
+	 *           --- DynamicShape (simpleShape)
 	 */
 	@Before
 	public void setUpNestedStructure() throws Exception {
 		_topLevelNest = new CarrierShape(0, 0, 2, 2, 100, 100);
 		_midLevelNest = new CarrierShape(0, 0, 2, 2, 50, 50);
 		_bottomLevelNest = new CarrierShape(5, 5, 2, 2, 10, 10);
-		_simpleShape = new RectangleShape(1, 1, 1, 1, 5, 5);
+		_simpleShape = new DynamicShape(1, 1, 1, 1, 5, 5);
 		
 		_midLevelNest.add(_bottomLevelNest);
 		_midLevelNest.add(_simpleShape);
@@ -61,7 +61,7 @@ public class TestCarrierShape {
 	}
 	
 	/**
-	 * Checks that method add successfuly adds a valid Shape, supplied as 
+	 * Checks that method add successfully adds a valid Shape, supplied as 
 	 * argument, to a CarrierShape instance. 
 	 */
 	@Test
@@ -100,16 +100,16 @@ public class TestCarrierShape {
 	 */
 	@Test
 	public void testAddWithOutOfBoundsArgument() {
-		Shape rectangle = new RectangleShape(80, 80, 2, 2, 50, 50);
+		Shape shapeToAdd = new DynamicShape(80, 80, 2, 2, 50, 50);
 		
 		try {
-			_topLevelNest.add(rectangle);
+			_topLevelNest.add(shapeToAdd);
 			fail();
 		} catch(IllegalArgumentException e) {
 			// Expected action. Ensure the state of topLevelNest and 
-			// rectangle has not been changed.
-			assertFalse(_topLevelNest.contains(rectangle));
-			assertNull(rectangle.parent());
+			// shapeToAdd has not been changed.
+			assertFalse(_topLevelNest.contains(shapeToAdd));
+			assertNull(shapeToAdd.parent());
 		}
 	}
 	

@@ -2,7 +2,7 @@ package spaceshapes;
 
 /**
  * Interface to be implemented by classes whose instances need to be notified
- * of changes to a ShapeModel. A ShapeModel calls method upate() on all
+ * of changes to a ShapeModel. A ShapeModel calls method update() on all
  * registered ShapeModelListeners whenever its state changes.
  * 
  * @author Paramvir Singh (Original Author - Ian Warren)

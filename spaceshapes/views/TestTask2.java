@@ -140,7 +140,7 @@ public class TestTask2 {
 			}
 
 			public void treeNodesInserted( TreeModelEvent e ) {
-				_listenerMethodCalled = true;
+				_listenerMethodCalled = true; 
 				
 				/* Unpack event. */
 				int[] indices = e.getChildIndices();
@@ -155,7 +155,7 @@ public class TestTask2 {
 				assertEquals( 1, indices.length );
 				assertEquals( 0, indices[ 0 ] );
 				
-				/* Check the children array contains the single removed . */
+				/* Check the children array contains the single inserted Shape. */
 				assertNotNull( children );
 				assertEquals( 1, children.length );
 				assertSame( _newShape, children[ 0 ] );

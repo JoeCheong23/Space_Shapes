@@ -20,7 +20,7 @@ public class ImageRectangleShape extends RectangleShape {
 	}
 	
 	@Override
-	protected void doPaint(Painter painter) {
+	protected void drawShape(Painter painter) {
 		painter.drawImage(_picture,_x,_y,_width,_height);
 	}
 }

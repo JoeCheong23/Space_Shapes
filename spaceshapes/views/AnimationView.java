@@ -6,8 +6,8 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-import spaceshapes.GraphicsPainter;
 import spaceshapes.CarrierShape;
+import spaceshapes.GraphicsPainter;
 import spaceshapes.Painter;
 import spaceshapes.ShapeModelEvent;
 import spaceshapes.ShapeModelListener;
