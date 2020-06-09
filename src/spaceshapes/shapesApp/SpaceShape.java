@@ -29,8 +29,9 @@ import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 
 import spaceshapes.CarrierShape;
-import spaceshapes.DynamicRectangleShape;
-import spaceshapes.GemShape;
+import spaceshapes.DynamicShape;
+import spaceshapes.HexagonShape;
+import spaceshapes.ImageRectangleShape;
 import spaceshapes.OvalShape;
 import spaceshapes.RectangleShape;
 import spaceshapes.Shape;
@@ -149,18 +150,19 @@ public class SpaceShape extends JPanel {
 		
 		_model.add(new RectangleShape(440, 0, 10, 10, 4, 2), root);
 		//_model.add(new RectangleShape(0, 0, 5, 7), root);
-		_model.add(new GemShape(20, 20, 4, 4, 200, 20, "Space-Shape"), root);
+		_model.add(new HexagonShape(20, 20, 4, 4, 200, 20, "Space-Shape"), root);
 		//_model.add(new RectangleShape(0, 0, 2, 2, 10, 10), root);
-		_model.add(new DynamicRectangleShape(0, 0, 2, 3, 180, 130, "Changes Color", Color.CYAN), root);
+		_model.add(new DynamicShape(0, 0, 2, 3, 180, 130, "Changes Color", Color.CYAN), root);
 		_model.add(new OvalShape(50,110,2,2), root);
+	
 		
 
 		CarrierShape child = new CarrierShape(10, 10, 2, 2, 100, 100);
 		_model.add(new RectangleShape(10, 10, 10, 10, 4, 2), child);
-		_model.add(new DynamicRectangleShape(0, 0, 2, 3, 50, 80, Color.RED), child);
+		_model.add(new DynamicShape(0, 0, 2, 3, 50, 80, Color.RED), child);
 		_model.add(new OvalShape(10,10,2,2, 60, 60), child);
 		_model.add(child, root);
-		_model.add(new DynamicRectangleShape(0,0,0,20,35,25), root);
+		_model.add(new DynamicShape(0,0,0,20,35,25), root);
 	}
 	
 	/*

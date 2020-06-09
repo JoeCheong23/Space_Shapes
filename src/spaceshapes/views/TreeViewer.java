@@ -43,7 +43,7 @@ public class TreeViewer extends JPanel {
 		model.add(new RectangleShape(0, 0, 5, 5), model.root());
 		
 		// Create an instance of Task2 and set its adaptee to the ShapeModel.
-		_adapter = new Task1(model);
+		_adapter = new Task2(model);
 		
 		/*
 		 * Create the JTree component and set as its model the Task2 adapter 
