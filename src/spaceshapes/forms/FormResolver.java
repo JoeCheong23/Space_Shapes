@@ -1,7 +1,7 @@
 package spaceshapes.forms;
 
 import spaceshapes.CarrierShape;
-import spaceshapes.DynamicRectangleShape;
+import spaceshapes.DynamicShape;
 import spaceshapes.ImageRectangleShape;
 import spaceshapes.Shape;
 import spaceshapes.ShapeModel;
@@ -21,7 +21,7 @@ public class FormResolver {
 		
 		form.addFormElement(new ShapeFormElement());
 		
-		if(shapeClass == DynamicRectangleShape.class) {
+		if(shapeClass == DynamicShape.class) {
 			form.addFormElement(new ColourFormElement());
 		} else if(shapeClass == ImageRectangleShape.class) {
 			form.addFormElement(new ImageFormElement());
@@ -47,7 +47,7 @@ public class FormResolver {
 	public static FormHandler getFormHandler(Class<? extends Shape> shapeClass, ShapeModel model, CarrierShape parent) {
 		FormHandler handler = null;
 		
-		if(shapeClass == DynamicRectangleShape.class) {
+		if(shapeClass == DynamicShape.class) {
 			handler = new DynamicRectangleShapeFormHandler(model, parent);
 		} else if(shapeClass == ImageRectangleShape.class) {
 			handler = new ImageShapeFormHandler(model, parent);

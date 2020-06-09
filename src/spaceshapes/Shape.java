@@ -208,6 +208,13 @@ public abstract class Shape {
 	}
 	
 	/**
+	 * Returns this Shape's text.
+	 */
+	public String text() {
+		return _shapeText;
+	}
+	
+	/**
 	 * Returns a String whose value is the fully qualified name of this class 
 	 * of object. E.g., when called on a RectangleShape instance, this method 
 	 * will return "spaceshapes.RectangleShape".
@@ -287,7 +294,9 @@ public abstract class Shape {
 	 * Adds text to the current shape.
 	 */
 	protected void addText(String text) {
-		_shapeText = text;
+		if (!text.equalsIgnoreCase("")) {
+			_shapeText = text;
+		}
 	}
 	
 	/**
