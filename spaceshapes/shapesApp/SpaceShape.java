@@ -30,7 +30,6 @@ import javax.swing.tree.TreeSelectionModel;
 
 import spaceshapes.CarrierShape;
 import spaceshapes.DynamicShape;
-import spaceshapes.GemShape;
 import spaceshapes.HexagonShape;
 import spaceshapes.ImageRectangleShape;
 import spaceshapes.OvalShape;

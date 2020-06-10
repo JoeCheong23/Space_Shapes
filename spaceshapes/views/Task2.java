@@ -25,16 +25,16 @@ public class Task2 extends Task1 implements ShapeModelListener{
 		ShapeModelEvent.EventType eventType = event.eventType();
 			
 		if (eventType == ShapeModelEvent.EventType.ShapeAdded) {
-			Object[] pathArray = new Object[] {event.parent().parent(), event.parent()};
+			Object[] pathArray = event.parent().path().toArray();
 			TreePath treePath = new TreePath(pathArray);
-			TreeModelEvent treeEvent = new TreeModelEvent(event.parent(), treePath, new int[]{0}, new Object[]{event.operand()});
+			TreeModelEvent treeEvent = new TreeModelEvent(this, treePath, new int[]{event.index()}, new Object[]{event.operand()});
 			for (TreeModelListener listeners:_treeListenerList) {	
 				listeners.treeNodesInserted(treeEvent);
 			}
 		} else if (eventType == ShapeModelEvent.EventType.ShapeRemoved) {
-			Object[] pathArray = new Object[]{ event.parent()};
+			Object[] pathArray = event.parent().path().toArray();
 			TreePath treePath = new TreePath(pathArray);
-			TreeModelEvent treeEvent = new TreeModelEvent(event.parent(), treePath, new int[]{1}, new Object[]{event.operand()});
+			TreeModelEvent treeEvent = new TreeModelEvent(this, treePath, new int[]{event.index()}, new Object[]{event.operand()});
 			for (TreeModelListener listeners:_treeListenerList) {	
 				listeners.treeNodesRemoved(treeEvent);
 			}
