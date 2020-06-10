@@ -13,7 +13,7 @@ import org.junit.runners.Suite;
  *
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({spaceshapes.TestNestingShape.class, 
+@Suite.SuiteClasses({spaceshapes.TestCarrierShape.class, 
 	spaceshapes.views.TestTask1.class, 
 	spaceshapes.views.TestTask2.class,
 	spaceshapes.forms.TestImageShapeFormHandler.class})

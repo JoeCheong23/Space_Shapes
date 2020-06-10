@@ -294,7 +294,9 @@ public abstract class Shape {
 	 * Adds text to the current shape.
 	 */
 	protected void addText(String text) {
-		_shapeText = text;
+		if (!text.equalsIgnoreCase("")) {
+			_shapeText = text;
+		}
 	}
 	
 	/**
