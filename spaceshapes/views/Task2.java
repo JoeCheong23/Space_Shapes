@@ -18,7 +18,10 @@ public class Task2 extends Task1 implements ShapeModelListener{
 	public Task2(ShapeModel shapeModel) {
 		super(shapeModel);
 	}
-
+	
+	/**
+	 * Notifies the listeners of changes such as the addition or removal of a node from the TreeModel.
+	 */
 	@Override
 	public void update(ShapeModelEvent event) {
 		
@@ -43,11 +46,17 @@ public class Task2 extends Task1 implements ShapeModelListener{
 		}
 	
 
+	/**
+	 * Adds a new listener to the TreeModel.
+	 */
 	@Override
 	public void addTreeModelListener(TreeModelListener l) {
 		_treeListenerList.add(l);
 	}
- 
+	
+	/**
+	 * Removes a listener from the TreeModel.
+	 */
 	@Override
 	public void removeTreeModelListener(TreeModelListener l) {
 		_treeListenerList.remove(l);
